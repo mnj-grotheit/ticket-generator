@@ -1,0 +1,76 @@
+# ---------------------
+# Node / NPM / Yarn
+# ---------------------
+node_modules/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+dist/
+build/
+
+# ---------------------
+# Test Coverage
+# ---------------------
+coverage/
+
+# ---------------------
+# Produktions-/sensible Dateien
+# ---------------------
+.env
+.env.* # Falls du z. B. mehrere Environment-Files hast (z. B. .env.production)
+
+# ---------------------
+# IDEs / Editoren
+# ---------------------
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# ---------------------
+# Betriebssystem-spezifische Dateien
+# ---------------------
+.DS_Store      # macOS
+Thumbs.db      # Windows
+__MACOSX/      # macOS Zip-Extrakten
+
+# ---------------------
+# Sonstige temporäre Dateien
+# ---------------------
+*.swp         # vim
+*.bak
+*.tmp
+*.old
+*.log
+
+# ---------------------
+# Linter / Formatter
+# ---------------------
+
+.eslintcache
+
+# ---------------------
+# Babel
+# ---------------------
+babel.config.js.map
+@babel
+
+# ---------------------
+# Webpack
+# ---------------------
+.cache/
+.cache-loader/
+webpack.config.js.map
+
+# ---------------------
+# Optional: Lockfiles
+# ---------------------
+# In vielen Open-Source-Projekten werden lockfiles (package-lock.json, yarn.lock) 
+# bewusst mit eingecheckt, um reproduzierbare Builds zu gewährleisten. 
+# Wenn du sie nicht mit einchecken möchtest, kannst du sie hier ignorieren.
+# Aber Achtung: Das ist eher unüblich, da man in der Regel *lockfiles committed*,
+# um sicherzustellen, dass alle denselben (funktionierenden) Stand haben.
+# package-lock.json
+# yarn.lock
