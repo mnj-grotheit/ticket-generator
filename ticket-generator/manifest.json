@@ -62,15 +62,15 @@
                             }
                         ]
                     },
-                    "id": "TaskPaneRuntime",
+                    "id": "TicketPaneRuntime",
                     "type": "general",
                     "code": {
-                        "page": "https://localhost:3000/taskpane.html"
+                        "page": "https://localhost:3000/dialog.html"
                     },
                     "lifetime": "short",
                     "actions": [
                         {
-                            "id": "TaskPaneRuntimeShow",
+                            "id": "TicketPaneRuntimeShow",
                             "type": "openPage",
                             "pinnable": false,
                             "view": "dashboard"
@@ -143,7 +143,7 @@
                                                 "title": "Reads Mail",
                                                 "description": "Opens a Pane to confirm created Ticket."
                                             },
-                                            "actionId": "TaskPaneRuntimeShow"
+                                            "actionId": "TicketPaneRuntimeShow"
                                         }
                                     ]
                                 }

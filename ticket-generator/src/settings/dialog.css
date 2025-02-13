@@ -1,110 +1,116 @@
-/* Allgemeine Layout- und Container-Stile */
+/* dialog.css */
+
+/* Grundlegendes Layout und Body-Styling */
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  /* Bereichs- und Formular-Stile */
-  section {
-    margin: 10px 20px;
-  }
-  
-  #ticketForm {
-    max-width: 600px;
-    margin: 20px auto;
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #dedede;
-    border-radius: 4px;
-  }
-  
-  /* Zeilen innerhalb des Formulars */
-  .ms-Grid-row {
-    margin-bottom: 15px;
-  }
-  
-  /* Label-Stile */
-  .ms-Label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-  }
-  
-  /* Textfelder */
-  .ms-TextField-field {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  /* Textarea-Stile */
-  textarea.ms-TextField-field {
-    resize: vertical;
-  }
-  
-  /* Dropdowns */
-  .ms-Dropdown-select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
-    box-sizing: border-box;
-  }
-  
-  /* Submit-Button */
-  .ms-Button {
-    display: inline-block;
-    background-color: #0078d4;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 2px;
-    font-size: 14px;
-    cursor: pointer;
-    text-align: center;
-  }
-  
-  .ms-Button:hover {
-    background-color: #005a9e;
-  }
-  
-  /* Microsoft-Beispiel: Elemente, die standardmäßig ausgeblendet sind */
-  .not-configured-warning {
-    display: none;
-  }
-  
-  .error-display {
-    display: none;
-    color: red;
-    margin-top: 10px;
-  }
-  
-  /* Microsoft-Beispiel: Weitere Container-Stile */
-  .gist-list-container {
-    margin: 10px -8px;
-    display: none;
-  }
-  
-  .list-title {
-    border-bottom: 1px solid #a6a6a6;
-    padding-bottom: 5px;
-  }
-  
-  ul {
-    margin-top: 10px;
-  }
-  
-  .ms-ListItem-secondaryText,
-  .ms-ListItem-tertiaryText {
-    padding-left: 15px;
-  }
-  
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+/* Section-Styles */
+section {
+  margin: 10px 20px;
+}
+
+/* Formular-Container */
+#ticketForm {
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #dedede;
+  border-radius: 4px;
+}
+
+/* Zeilen innerhalb des Formulars */
+.ms-Grid-row {
+  margin-bottom: 15px;
+}
+
+/* Label-Styling */
+.ms-Label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Input- und Textarea-Felder */
+.ms-TextField-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Textarea-Anpassungen */
+textarea.ms-TextField-field {
+  resize: vertical;
+}
+
+/* Dropdown-Styling */
+.ms-Dropdown-select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+/* Button-Styling */
+.ms-Button {
+  display: inline-block;
+  background-color: #0078d4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.ms-Button:hover {
+  background-color: #005a9e;
+}
+
+/* Microsoft-Beispiel: Elemente, die ausgeblendet werden */
+.not-configured-warning {
+  display: none;
+}
+
+.error-display {
+  display: none;
+}
+
+.gist-list-container {
+  margin: 10px -8px;
+  display: none;
+}
+
+.list-title {
+  border-bottom: 1px solid #a6a6a6;
+  padding-bottom: 5px;
+}
+
+ul {
+  margin-top: 10px;
+}
+
+.ms-ListItem-secondaryText,
+.ms-ListItem-tertiaryText {
+  padding-left: 15px;
+}
+
+/* Status-/Meldungsanzeige */
+#statusMessage {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}

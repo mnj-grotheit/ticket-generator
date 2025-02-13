@@ -54,7 +54,7 @@ __MACOSX/      # macOS Zip-Extrakten
 # ---------------------
 # Babel
 # ---------------------
-babel.config.js.map
+babel.config.json.map
 @babel
 
 # ---------------------
@@ -63,7 +63,10 @@ babel.config.js.map
 .cache/
 .cache-loader/
 webpack.config.js.map
-
+# ---------------------
+# AI_Config
+# ---------------------
+ai_config.js
 # ---------------------
 # Optional: Lockfiles
 # ---------------------

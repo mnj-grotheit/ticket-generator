@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-  <title>Ticket erstellen</title>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Ticket-Formular</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Office JavaScript API -->
-  <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
-
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
   <!-- Office UI Fabric (Fluent UI) Stylesheet -->
   <link rel="stylesheet" href="https://res-1.cdn.office.net/files/fabric-cdn-prod_20230815.002/office-ui-fabric-core/11.0.0/css/fabric.min.css"/>
-  
-  <!-- Eigene Styles (optional) -->
-  <link href="./dialog.css" rel="stylesheet" type="text/css" />
+  <!-- Eigene CSS -->
+  <link rel="stylesheet" href="dialog.css">
 </head>
 <body class="ms-font-l">
   <main class="ms-Grid" dir="ltr">
@@ -24,39 +22,35 @@
       <div class="ms-Grid-row">
         <div class="ms-TextField">
           <label class="ms-Label" for="titel">Titel</label>
-          <input type="text" id="titel" class="ms-TextField-field" placeholder="Ticket Titel" />
+          <input type="text" id="titel" class="ms-TextField-field" placeholder="Ticket Titel" required>
         </div>
       </div>
-
       <!-- Beschreibung -->
       <div class="ms-Grid-row">
         <div class="ms-TextField">
           <label class="ms-Label" for="beschreibung">Beschreibung</label>
-          <textarea id="beschreibung" class="ms-TextField-field" rows="5" placeholder="Ticket Beschreibung"></textarea>
+          <textarea id="beschreibung" class="ms-TextField-field" rows="5" placeholder="Ticket Beschreibung" required></textarea>
         </div>
       </div>
-
       <!-- Verantwortlicher -->
       <div class="ms-Grid-row">
         <div class="ms-TextField">
           <label class="ms-Label" for="verantwortlicher">Verantwortlicher</label>
-          <input type="text" id="verantwortlicher" class="ms-TextField-field" placeholder="Verantwortlicher" />
+          <input type="text" id="verantwortlicher" class="ms-TextField-field" placeholder="Verantwortlicher" required>
         </div>
       </div>
-
       <!-- Ansprechpartner (Kunde) -->
       <div class="ms-Grid-row">
         <div class="ms-TextField">
           <label class="ms-Label" for="ansprechpartner">Ansprechpartner (Kunde)</label>
-          <input type="text" id="ansprechpartner" class="ms-TextField-field" placeholder="Ansprechpartner" />
+          <input type="text" id="ansprechpartner" class="ms-TextField-field" placeholder="Ansprechpartner" required>
         </div>
       </div>
-
       <!-- Ticket-Typ -->
       <div class="ms-Grid-row">
         <div class="ms-Dropdown">
           <label class="ms-Label" for="ticketTyp">Ticket-Typ</label>
-          <select id="ticketTyp" class="ms-Dropdown-select">
+          <select id="ticketTyp" class="ms-Dropdown-select" required>
             <option value="">Bitte auswählen</option>
             <option value="Anpassung">Anpassung</option>
             <option value="Beratung/Schulung">Beratung/Schulung</option>
@@ -68,26 +62,23 @@
           </select>
         </div>
       </div>
-
       <!-- Ticket-Kategorie -->
       <div class="ms-Grid-row">
         <div class="ms-Dropdown">
           <label class="ms-Label" for="ticketKategorie">Ticket-Kategorie</label>
-          <select id="ticketKategorie" class="ms-Dropdown-select">
+          <select id="ticketKategorie" class="ms-Dropdown-select" required>
             <option value="">Bitte auswählen</option>
-            <!-- Beispielhafte Optionen – diese kannst Du dynamisch aus einer separaten Datei laden -->
             <option value="Kategorie1">Kategorie 1</option>
             <option value="Kategorie2">Kategorie 2</option>
             <option value="Kategorie3">Kategorie 3</option>
           </select>
         </div>
       </div>
-
       <!-- Priorität -->
       <div class="ms-Grid-row">
         <div class="ms-Dropdown">
           <label class="ms-Label" for="prioritaet">Priorität</label>
-          <select id="prioritaet" class="ms-Dropdown-select">
+          <select id="prioritaet" class="ms-Dropdown-select" required>
             <option value="">Bitte auswählen</option>
             <option value="Niedrig">Niedrig</option>
             <option value="Mittel">Mittel</option>
@@ -95,7 +86,6 @@
           </select>
         </div>
       </div>
-
       <!-- Submit-Button -->
       <div class="ms-Grid-row">
         <button type="submit" class="ms-Button ms-Button--primary">
@@ -103,9 +93,10 @@
         </button>
       </div>
     </form>
+    <!-- Anzeige für Status-/Fehlermeldungen -->
+    <div id="statusMessage"></div>
   </main>
-  <script type="text/javascript" src="../../node_modules/jquery/dist/jquery.js"></script>
-  <script type="text/javascript" src="../helpers/aiServicesGenerateTicket.js"></script>
-  <script type="text/javascript" src="dialog.js"></script>
+  <!-- dialog.js als ES-Modul einbinden -->
+  <script type="module" src="dialog.js"></script>
 </body>
 </html>
